@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+
+<title>Registration Page</title>
+</head>
+<body style="background-color:powderblue;">
+<center>
+<div class="container">
+<h3>Welcome to the Revature Bank</h3>
+</div>
+</center>
+ <div class="green">
+	<div align="center">
+	<h1><u>Customer Registration</u></h1>
+	<form action="open" method="post" id="myForm" name="myForm">
+	<table border="1px"style="background-color:yellow;">
+	<tr>
+	<td>
+	<label>Customer Name :</label>
+	<input type="text" name="customer_name" id="customer_name" placeholder="USERNAME"></td>
+	</tr>
+	<tr>
+	<tr>
+	<td>
+	<label>Contact Number :</label>
+	<input type="number" name="contact_no" id="contact_no" placeholder="Contact Number"></td>
+	</tr>
+	<tr>
+	<tr>
+	<td>
+	<label>Email Id &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+	<input type="email" name="email_id"  id="email_id" placeholder=" Email Id"></td>
+	</tr>
+	<tr>
+	<tr>
+	<td>
+	<label>City&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :</label>
+	<input type="text" name="city"  id="city" placeholder="City"> </td>
+	</tr>
+	<tr>
+	
+	<tr>
+	<td>
+	<label>State&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+	<input type="text"  name="state" id="state" placeholder="State"></td>
+	</tr>
+	<tr>
+	<td>
+	<label>Country&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+	<input type="text"  name="country" id="country" placeholder="country"></td>
+	</tr>
+	<tr>
+	<tr>
+	<td>
+	<label>Pan Number&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+	<input type="text" name="pan_number" id="pan_number" placeholder="PAN Number"></td>
+	</tr>
+	<tr>
+	<tr>
+	<td>
+	<label>Password &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+	<input type="password" id="password" name="password" placeholder="PASSWORD"></td>
+	</tr>
+	<tr align="center">
+	<td>
+	<button type="button" id="b2" >Register</button>
+	</td>
+	</tr>
+	</table>                                                                                                                                                                                                                                                                                          
+	</form> 
+	</div>
+	</div>
+	<div id="result" class="container"></div>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script >
+	b2.onclick=()=>{
+	if(!document.getElementById('customer_name').value||!document.getElementById('contact_no').value||!document.getElementById('email_id').value||!document.getElementById('city').value||!document.getElementById('country').value||!document.getElementById('pan_number').value||!document.getElementById('password').value){
+		document.getElementById("results").innerHTML="<h3>Complete the form...</h3>"
+	}
+	else{
+	let url="http://localhost:8090/project1/register";
+	fetch(url,{
+		method :'post',
+		body: JSON.stringify({
+			name : document.getElementById('customer_name').value,
+			contactNumber :document.getElementById('contact_no').value,
+			emailId:document.getElementById('email_id').value,
+			city :document.getElementById('city').value,
+			state:document.getElementById('state').value,
+			country:document.getElementById('country').value,
+			panNumber:document.getElementById('pan_number').value,
+			password:document.getElementById('password').value
+		}),
+		headers :{
+		'Content-type':'application/json;charset=UTF-8',
+	},
+	})
+	.then(function(data){
+		
+		console.log(data)
+		//alert("Record Created Successfully");
+	//window.location.href="http://localhost:8090/project1/RegisterSuccessfully.html";
+		
+	})
+	.catch((error) => {
+		  console.error('Error:', error);
+		  alert(error);
+		});
+	}
+	alert("Registered Successfully");
+	window.location.href="http://localhost:8090/project1/RegisterSuccessfully.html";
+	}
+	
+
+	</script>
+	
+</body>
+</html>

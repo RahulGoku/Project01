@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
+<style>
+  * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+</style>
+<title>Customer Function</title>
+</head>
+<body style="background-color: aquamarine;">
+<center>
+<div class="container">
+<h3 align="center">Welcome to the Revature Bank</h3>
+</div>
+</center>
+<div class="container">
+        <h1>
+    <a href="index.html"> <button class='btn btn-success pull-right'>
+        Logout
+          </button></a>
+    </h1>
+    </div>
+
+
+<div class="row" style="margin-top: 5%;">
+  <div class="column" style="margin-left: 20%;">
+    <div class="card"><form action="" method="POST">
+      <div class="card" style="width: 30rem;">
+        <div class="card-body">
+          <h5 class="card-title">Transfer</h5>
+          <p class="card-text"><h4>Revature Bank</h4></p>
+          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Transfer</button>
+        </div>
+      </div>
+      </form></div>
+  </div>
+  <div class="column">
+    <div class="card"><form action="" method="POST">
+      <div class="card" style="width: 30rem;">
+        <div class="card-body">
+          <h5 class="card-title">Deposit</h5>
+      <p class="card-text"><h4>Revature Bank</h4></p>
+          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal1">Deposit</button>
+        </div>
+      </div>
+      </form></div>
+  </div>
+ 
+</div><br>
+<div class="row" class="center"style="margin-top:5%;">
+  <div class="column"style="margin-left: 20%;">
+    <div class="card"><form action="" method="POST">
+      <div class="card" style="width: 30rem;">
+        <div class="card-body">
+          <h5 class="card-title">Withdraw</h5>
+         <p class="card-text"><h4>Revature Bank</h4></p>
+          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2">Withdraw</button>
+        </div>
+      </div>
+      </form></div>
+  </div>
+  <div class="column">
+    <div class="card"><form action="" method="GET">
+      <div class="card" style="width: 30rem;">
+        <div class="card-body">
+          <h5 class="card-title">View Statement</h5>
+           <p class="card-text"><h4>Revature Bank</h4></p>
+          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal3">View Statement</button>
+        </div>
+      </div>
+      </form></div>
+  </div>
+ 
+</div>
+ 
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Transfer</h4>
+        </div>
+        <form method="post" action="transfer">
+        <div class="modal-body">    
+         <label>Enter Amount &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :</label>
+         <input type="number" name="tf" id="transfer" placeholder="Enter Amount"><br>
+         <label>Enter UserId Of other User  :</label>
+         <input type="text" name="uido" id="otherUserId" placeholder="Enter User Id">
+        </div>
+        <div class="modal-footer">
+          <input type="submit" id ="tf" value="Transfer">
+        </div>
+          </form>
+        
+      </div>
+      
+    </div>
+  </div>
+  
+  <div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Credit</h4>
+        </div>
+        <div class="modal-body">
+          <form method="post" action="credit">
+          <label>Enter Amount &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :</label>
+         <input type="number" name="credit" id="Deposit" placeholder="Enter Amount"><br>
+        </div>
+        <div class="modal-footer">
+   <!--    <button type="button"  id ="cr" class="btn btn-default" data-dismiss="modal">Deposit</button>-->     
+          <input type="submit"  id="cr" value="Deposit">
+        </div>
+      </form>
+      </div>
+      
+    </div>
+  </div>
+  <div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Withdraw</h4>
+        </div>
+        <div class="modal-body">
+        <form method="post" action="debit"> 
+          <label>Enter Amount &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :</label>
+         <input type="number" name="debit" id="withdraw" placeholder="Enter Amount"><br>
+        </div>
+      <div id="result" class="container"></div>
+        <div class="modal-footer">
+     <!--       <button type="button" id ="dr" class="btn btn-default" data-dismiss="modal">Withdraw</button>-->
+      <input type="submit"   id="dr" value="Withdraw">
+        </div>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+  <div class="modal fade" id="myModal3" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <label>View Statement :</label>
+      <!--     <input type="number" id="otherUserId" placeholder="Enter User Id">--> 
+        </div>
+        <div class="modal-footer">
+         <form method="post" action="view">
+          <input type="submit" id ="vr" value="View Statement" >
+          </form>
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.min.js"></script>
+<!--  <script src="customerfunction.js"></script>-->
+</body>
+</html>

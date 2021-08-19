@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
+<style>
+  * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+</style>
+<title>Customer Function</title>
+</head>
+<body style="background-color: aquamarine;">
+<!--<div class="container px-5 py-5">
+<div class="row" style="background-color:aquamarine;align-self: center;" >
+  
+    <div class="col mx-1" style="background-color:royalblue;"> <label>Enter Amount</label>
+      <h3 style="background-color:gray;">Transfer</h3>
+      <form action="" method="post" style="background-color: yellowgreen;"></form>
+      <input type="number" id="credit" placeholder="Deposit Money">
+    </form>
+    </div>
+    <hr>
+    <br>
+    <br>
+    <br><
+    <br>
+    <br>
+    <hr>
+    <h3 style="background-color:gray;">Deposit</h3>
+    <div class="col mx-1"style="background-color:yellowgreen;"> <label>Enter Amount</label>
+      <form action="" method="post" style="background-color: yellowgreen;"></form>
+      <input type="number" id="credit" placeholder="Deposit Money">
+    </form>
+    </div><br>
+    <hr>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <h3 style="background-color:gray;">Withdraw</h3>
+    <div class="col mx-1" style="background-color:royalblue;"> <label>Enter Amount</label>
+      <form action="" method="post" style="background-color: yellowgreen;"></form>
+      <input type="number" id="credit" placeholder="Deposit Money">
+    </form>
+    </div>
+    <hr>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <h3 style="background-color:gray;"> view Statement</h3>
+    <div class="col mx-1" style="background-color:yellowgreen;">
+      <form>
+      <td><input type="submit" value="View"></td>
+      </form>
+    </div>
+    <hr>
+</div>
+</div>-->
+<!--<form action="" method="POST">
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Transfer</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <button type="submit" style="background-color: brown;">Transfer</button>
+  </div>
+</div>
+</form>-->
+<body style="background-color: aquamarine;">
+<h3 align="center">Welcome to the Revature Bank</h3>
+<div class="container">
+        <h1>
+    <a href="index.html"> <button class='btn btn-success pull-right'>
+        Logout
+          </button></a>
+    </h1>
+    </div>
+
+
+<div class="row" style="margin-top: 5%;">
+  <div class="column" style="margin-left: 20%;">
+    <div class="card"><form action="" method="POST">
+      <div class="card" style="width: 30rem;">
+        <div class="card-body">
+          <h5 class="card-title">Open Account</h5>
+          <p class="card-text"><h4>Revature Bank</h4></p>
+          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Account</button>
+        </div>
+      </div>
+      </form></div>
+  </div>
+  <div class="column">
+    <div class="card"><form action="" method="POST">
+      <div class="card" style="width: 30rem;">
+        <div class="card-body">
+          <h5 class="card-title">Update Record</h5>
+         <p class="card-text"><h4>Revature Bank</h4></p>
+          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal1">Update</button>
+        </div>
+      </div>
+      </form></div>
+  </div>
+ 
+</div><br>
+<div class="row" class="center"style="margin-top:5%;">
+  <div class="column"style="margin-left: 20%;">
+    <div class="card"><form action="" method="POST">
+      <div class="card" style="width: 30rem;">
+        <div class="card-body">
+          <h5 class="card-title">Delete Record</h5>
+        <p class="card-text"><h4>Revature Bank</h4></p>
+          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2">Delete</button>
+        </div>
+      </div>
+      </form></div>
+  </div>
+  <div class="column">
+    <div class="card"><form action="" method="GET">
+      <div class="card" style="width: 30rem;">
+        <div class="card-body">
+          <h5 class="card-title">View Record</h5>
+          <p class="card-text"><h4>Revature Bank</h4></p>
+          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal3">View Record</button>
+        </div>
+      </div>
+      </form></div>
+  </div>
+ 
+</div>
+ 
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">open account</h4>
+        </div>
+             <center> 
+        <form action="open" method="post" id="myForm" name="myForm">
+	<table border="1px"style="background-color:yellow;">
+	<tr>
+	<td>
+	<label>Registerd Id &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+	<input type="email" name="emailid"  placeholder=" Enter User id"></td><br>
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<label>Opening &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+	<input type="number" name="opa"   placeholder=" Enter Amount"></td>
+	</tr>
+	</table>                                
+        <div class="modal-footer">
+          <input type="submit"  id="ud" value="Open Account">
+        </div>
+          </form>
+    </center>
+        
+      </div>
+      
+    </div>
+  </div>
+  
+      
+   
+  
+  <div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Update Record</h4>
+        </div>
+        <div class="modal-body">
+          <form method="post" action="update">
+          <label>Enter userId &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :</label>
+         <input type="text" name="uid" id="updateuid" placeholder="Enter User Id"><br>
+          <label>Enter New Name :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :</label>
+         <input type="text" name="newname" id="updateuid1" placeholder="Enter New Name"><br>
+        </div>
+        <div class="modal-footer">
+   <!--    <button type="button"  id ="cr" class="btn btn-default" data-dismiss="modal">Deposit</button>-->     
+          <input type="submit"  id="ud" value="Update">
+        </div>
+      </form>
+      </div>
+      
+    </div>
+  </div>
+  <div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Delete Record</h4>
+        </div>
+        <div class="modal-body">
+        <form action="delete" method="post"> 
+          <label>Enter UserId &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :</label>
+         <input type="text" name="duid" id="deleteuid" placeholder="Enter User Id"><br>
+        </div>
+        <div class="modal-footer">
+     <!--       <button type="button" id ="dr" class="btn btn-default" data-dismiss="modal">Withdraw</button>-->
+      <input type="submit"   id="duid" value="Delete">
+        </div>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+  <div class="modal fade" id="myModal3" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Record Details</h4>
+        </div>
+        <div class="modal-body">
+           <form action="view1" method="post"> 
+          <label>Enter Id:</label>
+        <input type="text" name="vota" placeholder="Enter User Id">
+        </div>
+        <div class="modal-footer">
+         <form method="post" action="view">
+          <input type="submit" id ="evr" value="View Statement" >
+          </form>
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.min.js"></script>
+<!--  <script src="customerfunction.js"></script>-->
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script >
+b2.onclick=()=>{
+	if(!document.getElementById('customer_name').value||!document.getElementById('contact_no').value||!document.getElementById('email_id').value||!document.getElementById('city').value||!document.getElementById('country').value||!document.getElementById('pan_number').value||!document.getElementById('password').value){
+		document.getElementById("results").innerHTML="<h3>Complete the form...</h3>"
+	}
+	else {
+	let url="http://localhost:8090/project1/register";
+	fetch(url,{
+		method :'post',
+		body: JSON.stringify({
+			name : document.getElementById('customer_name').value,
+			contactNumber :document.getElementById('contact_no').value,
+			emailId:document.getElementById('email_id').value,
+			city :document.getElementById('city').value,
+			state:document.getElementById('state').value,
+			country:document.getElementById('country').value,
+			panNumber:document.getElementById('pan_number').value,
+			password:document.getElementById('password').value
+		}),
+		headers :{
+		'Content-type':'application/json;charset=UTF-8',
+	},
+	})
+	.then(function(data){
+		
+		console.log(data)
+		//alert("Record Created Successfully");
+	//window.location.href="http://localhost:8090/project1/RegisterSuccessfully.html";
+		
+	})
+	.catch((error) => {
+		  console.error('Error:', error);
+		  alert(error);
+		});
+	}
+	alert("Registered Successfully");
+	window.location.href="http://localhost:8090/project1/RegisterSuccessfully.html";
+	}
+	
+
+	</script>
+</body>
+</html>
